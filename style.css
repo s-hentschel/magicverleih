@@ -1,0 +1,134 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21.05.2018, 09:55:36
+    Author     : Sebastian
+*/
+            html{
+                background: #ccccff;
+            }
+            
+            table,th, td{
+                border:1px solid black;
+            }
+            
+            table, .newSearch{
+                margin-left: 2%;
+            }
+            
+           
+            
+            h1{
+                text-align: center;
+            }
+            article{
+                padding-left: 1%;
+            }
+            
+            form{
+                background: white;
+            }
+            
+            form button .habich{
+               float:right;
+            }
+            
+            .anzahl{
+                width: 50px;
+            }
+            
+            td{
+                text-align: center;
+            }
+            
+           
+            
+            .notification{
+                color: red;
+                margin-left: 2%;
+               
+            }
+            
+            #wrapper{
+                width: 90%;
+                min-height:  300px;
+                background: white;
+                margin-left: 5%;
+                margin-right: 5%;
+                padding: 1%;
+                
+            }
+            nav{
+                margin-left:10%;
+                margin-right:10%;
+                margin-bottom: 40px;
+            }
+            
+           
+            ul {
+                list-style-type: none;
+                margin-left: 10%;
+                margin-right: 10%;
+                padding:0;
+            }
+            
+            li {
+                  float: left;
+            }
+            
+            li a {
+                display: block;
+                width: 150px;
+                color: black;
+                text-align: center;
+                background-color: lightgray;
+                padding: 0.2em 0.6em;
+                text-decoration: none;
+                border: 1px solid lightgray;
+                border-bottom: 1px solid darkgray;
+                border-right: 1px solid darkgray;
+            }
+            
+            li a:hover {
+                background-color: silver;
+                border: 1px solid darkgray;
+                border-bottom: 1px solid black;
+                border-right: 1px solid black;
+            }
+            .grid1{
+                width: 60px;
+            }
+            
+            .grid4{
+                width: 23%;
+            }
+            
+            .grid3{
+                width: 15%;
+            }
+            
+            .grid12{
+                width: 90%; 
+            }
+            
+            
+            
+            .grid1, .grid4, .grid12{
+                
+                margin: 10px;
+                
+                float: left;
+            }
+            
+            .newLine{
+                clear: both;
+            }
+            
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+
