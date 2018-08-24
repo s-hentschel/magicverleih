@@ -5,13 +5,13 @@ setcookie("been_here","ja");?>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Magic GiveOrTake</title>
+        <title>Magic Give and Take</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <header>
-            <h1>Magic Give And Take</h1>
+            <h1>Magic Give and Take</h1>
         </header>
          <?php  
        
@@ -19,6 +19,7 @@ setcookie("been_here","ja");?>
         ?>
                 
         <br>
+        <div class='newLine'></div>
         <div id="wrapper">
             <h2>Was wird hier gemacht?</h2>
             <article>

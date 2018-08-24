@@ -55,6 +55,7 @@ and open the template in the editor.
             #wrapper{
                 width: 90%;
                 min-height:  300px;
+                min-width: 310px;
                 background: white;
                 margin-left: 5%;
                 margin-right: 5%;
@@ -101,9 +102,14 @@ and open the template in the editor.
             }
             
             
+            .floatTable{
+                float: left;
+            }
+            
             .grid1{
                 width: 60px;
             }
+            
             
             .grid4{
                 width: 23%;
@@ -124,7 +130,7 @@ and open the template in the editor.
             
             .grid1, .grid4, .grid12{
                 
-                margin: 10px;
+                min-width:200px;
                 
                 float: left;
             }

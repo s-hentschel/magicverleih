@@ -3,13 +3,13 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Magic GiveOrTake</title>
+        <title>Magic Give and Take</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <header>
-            <h1>Magic Give And Take</h1>
+            <h1>Magic Give and Take</h1>
         </header>
          <?php
             
@@ -18,6 +18,7 @@
         ?>
                 
         <br>
+        <div class='newLine'></div>
         <div id="wrapper">
             <h3>Verliehene Karten</h3>
             <?php
@@ -103,7 +104,7 @@
         $select_verleih_stmt->store_result();
         if($select_verleih_stmt->num_rows>0){
             ?>
-            <table>
+            <table class='floatTable'>
                 <tr>
                     <th>Anzahl</th>
                     <th>Kartenname</th>
