@@ -1,3 +1,6 @@
+<?php session_start();
+//Cookie setzen, damit der User nächstes Mal nicht mehr zum Tutorial weitergeleitet wird
+setcookie("been_here","ja");?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,13 +13,8 @@
         <header>
             <h1>Magic Give And Take</h1>
         </header>
-         <?php
-            //Cookie setzen, damit der User nächstes Mal nicht mehr zum Tutorial weitergeleitet wird
-            setcookie("been_here","ja");
-         
-            session_start();
-            
-        
+         <?php  
+       
             require_once("includes/Navleiste.php");
         ?>
                 
@@ -65,12 +63,12 @@
             </article>
             
                 
-                
-           
-        </div>
          <div class="newLine">      
-                <footer class="grid12">Sebastian Hentschel 2018</footer>
-            </div>
+         </div>     
+        </div>
+         <footer>
+                <p>Sebastian Hentschel 2018</p>
+            </footer>
     </body>
 </html>
 

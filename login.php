@@ -1,3 +1,21 @@
+<?php session_start();
+ if(isset($_POST['username'])){
+    //versuche Verbindung zur DB aufzubauen
+    require_once("config/db_confg.php");
+    $mysqli = new mysqli($dbhost,$dbuser,$dbpw,$dbname);
+    if($mysqli->connect_error){
+        echo "Fehler beim Verbinden mit der DB" . mysqli_connect_error();
+        exit();
+    }
+                
+    check_password($mysqli,$_POST['username']);
+    $mysqli->close();
+}
+ if(isset($_SESSION['username'])){
+    //auf index.php weiterleiten
+    header("Location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,29 +28,7 @@
         <header>
             <h1>Magic Give And Take</h1>
         </header>
-        <?php
-            session_start();
-            if(isset($_POST['username'])){
-                //versuche Verbindung zur DB aufzubauen
-                require_once("config/db_confg.php");
-                $mysqli = new mysqli($dbhost,$dbuser,$dbpw,$dbname);
-                if($mysqli->connect_error){
-                    echo "Fehler beim Verbinden mit der DB" . mysqli_connect_error();
-                    exit();
-                }
-                
-                check_password($mysqli,$_POST['username']);
-                $mysqli->close();
-                              
-            }
-            if(isset($_SESSION['username'])){
-                //auf index.php weiterleiten
-                //echo "eingeloggt als ". $_SESSION['username'];
-                header("Location: index.php");
-            }
-                    
-            
-            
+        <?php    
             require_once("includes/Navleiste.php");
         ?>
             
@@ -52,12 +48,13 @@
                     <a href="registration.php">Hier registrieren</a><br>
                     
                 
-                
+            <div class="newLine">       
+            </div>    
                   
         </div>
-         <div class="newLine">      
-                <footer class="grid12">Sebastian Hentschel 2018</footer>
-            </div>
+        <footer>
+            <p>Sebastian Hentschel 2018</p>
+        </footer>
     </body>
 </html>
 

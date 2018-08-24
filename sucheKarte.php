@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,7 +12,7 @@
             <h1>Magic Give And Take</h1>
         </header>
         <?php
-            session_start();
+            
             
         
             require_once("includes/Navleiste.php");
@@ -102,7 +103,7 @@
             ?>
             <form class="newSearch" action="sucheKarte.php" method="POST">
                 <input name="anzahl" type='text' value='4' class="anzahl">
-                <input name="cardname" type='text' value='Cathartic Reunion'>
+                <input name="cardname" type='text' value='Lightning Bolt'>
                 <input name="datum" type="date" value="" min="<?php echo date('Y-m-d'); ?>">
                 <input name="uhrzeit" type="time">
                 <Button class="add" type="submit">+</button>
@@ -235,6 +236,4 @@
         
         return $mysqli->insert_id;
     }
-    
-    
-?>
+    ?>

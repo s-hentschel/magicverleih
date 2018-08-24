@@ -1,3 +1,8 @@
+<?php session_start();
+if(isset($_GET['logout'])){
+                session_destroy();
+                session_start();
+            }?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,18 +17,16 @@
         </header>
          <?php
             //check, ob Besucher schonmal auf der Seite war
+           
             if(!isset($_COOKIE["been_here"]))
                 header("Location: tutorial.php");
          
          
-            session_start();
+            
             
             /*Logout prüfen*/
             //TODO: LOGOUT wirklich in index?
-            if(isset($_GET['logout'])){
-                session_destroy();
-                session_start();
-            }
+            
             
             
         
@@ -75,6 +78,9 @@
                                     echo ", " . $datum->format('H:i'); 
                                 echo "<br>\n";
                             }
+                            else
+                                echo "bis: egal<br>\n";
+                           
                        
                             if(isset($_SESSION['username'])){
                                 //checken, ob HabIch schon geklickt wurde und nur noch Bestätigung erforderlich ist
@@ -103,11 +109,15 @@
                     $mysqli->close();
                  
             ?>
-  
-            <div class="newLine">      
-                <footer class="grid12">Sebastian Hentschel 2018</footer>
+            
+            <div class="newLine"> 
             </div>
-        </div>
+            </div>
+            <footer>
+                <p>Sebastian Hentschel 2018</p>
+            </footer>
+            
+           
     </body>
 </html>
 

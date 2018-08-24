@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,7 +12,6 @@
             <h1>Magic Give And Take</h1>
         </header>
          <?php
-             session_start();
             
         
             require_once("includes/Navleiste.php");
@@ -55,11 +55,13 @@
                 $mysqli->close();
             }
             ?>
-           
-        </div>
-         <div class="newLine">      
-                <footer class="grid12">Sebastian Hentschel 2018</footer>
+            <div class="newLine">        
             </div>
+        </div>
+        
+            <footer>
+                <p>Sebastian Hentschel 2018</p>
+            </footer>
     </body>
 </html>
 

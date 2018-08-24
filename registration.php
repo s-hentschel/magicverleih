@@ -52,7 +52,7 @@
         </header>
         <?php require_once("includes/Navleiste.php");?>
                
-        <div class="newLine"></div>
+        <br>
         <div id="wrapper">
            
         <?php        
@@ -81,16 +81,18 @@
 
             //falls keine Fehler: DB Eintrag in Tabelle user_aspirant anlegen, muss dann vom admin bestätigt werden
             if(!in_array(true, $eingabefehler)){
-
+                $mysqli->autocommit(true);
                 $insert_user_candidate_stmt = $mysqli->prepare("INSERT INTO user_candidate(username, password, vorname, nachname)"
-                                            . "values(?,?,?,?)");
+                                            . " VALUES (?,?,?,?)");
                 $password_hashed = password_hash($_POST['password'],PASSWORD_DEFAULT);
                 $insert_user_candidate_stmt->bind_param('ssss', $_POST['username'],$password_hashed , $_POST['vorname'], $_POST['nachname']);
                 $insert_user_candidate_stmt->execute();
-
+                
+                
 
 
                 $insert_user_candidate_stmt->close();
+                $mysqli->close();
                 $registration_complete=true;
             }       
         }
@@ -118,14 +120,15 @@
         }
         else echo "Registrierung wurde abgeschickt. Der Account wird in den nächsten Tagen freigeschaltet";
         ?>
-        </div>
-        
          <div class="newLine">      
-                <footer class="grid12">Sebastian Hentschel 2018</footer>
-            </div>
+         </div>
+        </div>
+       
+        <footer>
+                <p>Sebastian Hentschel 2018</p>
+        </footer>
     </body>
 </html>
-
 
 
 
